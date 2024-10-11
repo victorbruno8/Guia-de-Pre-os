@@ -1,0 +1,116 @@
+:root {
+    --primary-color: #3498db;
+    --seccundary-color: #2ecc71;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form .product-input {
+    flex-grow: 1;
+    padding: 10px 9px;
+    font-size: 15px;
+    border: 2px solid var(--primary-color);
+    outline: none;
+    border-radius: 20px;
+}
+
+.search-form .product-input:focus {
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.search-form button {
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.search-form button:hover {
+    transform: scale(1.05);
+}
+
+.product-list {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-top: 50px; 
+}
+
+.product-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+
+        & img {
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+        & h3 {
+            font-size: 12px;
+            color: var(--primary-color);
+        }
+
+        & .price {
+            color: var(--seccundary-color);
+            margin: 4px 0;
+            font-weight: bold;
+        }
+
+        & .loja {
+            overflow-y: auto;
+        }
+}
+
+.product-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px var(--primary-color)
+}
+
+.price-chart {
+    margin-top: 50px;
+}
